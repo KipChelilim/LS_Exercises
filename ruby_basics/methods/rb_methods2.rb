@@ -1,5 +1,5 @@
 def print_me
-  "I'm printing within the method!"
+  "I'm printing the return value!"
 end
 
 puts print_me
