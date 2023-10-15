@@ -1,0 +1,44 @@
+# Question 1: couldn't find File#path
+~ File#path comes from the parent object IO; this is an instance method
+~ File::path is a class method
+~ the difference is what the method is called on
+~     Class method: called on the class (File.path('bin')
+~         where File is class, path is method, 'bin' is argument
+~     Instance method: called on the object (f.path)
+~         where f is an object == 'bin', path is the method
+~ reread ruby Preparations chapter
+~ remember, if an instance method isn't in the API, check the parent in case it
+~     was inherited; also check older versions. this was not in 3.2.0, but it
+~     was in core-2.5.1
+
+# Question 2: uses default year of -4712 and default of 1 for day and month;
+              arguments replace these defaults vs incrementing; return is a
+              date object(format of #<YYY-MM-DD>), but puts calls to_s so this
+              gets converted to a string version of the date
+
+              puts Date.civil               => -4712-01-01
+              puts Date.civil(2016)         =>  2016-01-01
+              puts Date.civil(2016, 5)      =>  2016-05-01
+              puts Date.civil(2016, 5, 13)  =>  2016-05-13
+
+# Question 3: will result in an syntax error at definition, as parameters with 
+              defaults must be grouped together
+~ wrong: positional arguments. I read the "method" API, not "calling methods"
+~ ruby will assign arguments w/o defaults, then fill in from left to right the
+      ones with defaults
+
+# Question 4: a.bsearch { |num| num > 8 }
+              this works because all values > 8 come after all values <= 8
+              follows expectation of all falses precede all trues
+
+# Question 5: 
+              puts a.fetch(7)                      => an error
+              puts a.fetch(7, 'beats me')          => 'beats me'
+              puts a.fetch(7) { |index| index**2 } => 49
+
+# Question 6: this should print 5 and 8, order of arguments does not appear to
+              matter since both are optional
+
+# Question 7: puts s.public_methods(false).inspect
+# Question 8: puts a.min(2)
+# Question 9: .../3.2.0/exts/psych/Psych.html#method-c-load_file
