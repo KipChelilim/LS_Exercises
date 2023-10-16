@@ -1,0 +1,9 @@
+This code should print BOB twice, because name and save_name are refering to
+the same object. When the 'save_name' variable was initialized, it was assigned
+to the same object as the 'name' variable, since Ruby passed the reference to
+this object.
+
+This object was then mutated by the upcase! method call on line 3,
+as the upcase! method mutates the caller. This problem demonstrates the concept
+of variable assignment, Ruby's nature as a pass by reference language, and the
+ability of certain methods to mutate the caller.
