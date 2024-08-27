@@ -1,0 +1,15 @@
+1.  The remaining two sublanugages are the Data Definition and Data Manipulation
+    languages. DDL is concerned with definining tables and schema and uses
+    commands such as "CREATE TABLE", "ALTER TABLE", "ADD COLUMN", etc. DML is
+    focused on reading and modifying data within a table, using commands such as
+    "INSERT INTO", "DELETE FROM" and "SELECT".
+
+2.  DML
+3.  DDL
+4.  DDL
+5.  DML
+6.  DML
+7.  None. This is a meta-command provided by PostgreSQL
+8.  DML
+9.  DDL
+10. DDL

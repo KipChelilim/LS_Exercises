@@ -1,0 +1,4 @@
+ALTER TABLE planets ALTER mass TYPE NUMERIC;
+ALTER TABLE planets ALTER mass SET NOT NULL;
+ALTER TABLE planets ALTER designation SET NOT NULL;
+ALTER TABLE planets ADD CONSTRAINT positive_mass CHECK (mass >= 0);
