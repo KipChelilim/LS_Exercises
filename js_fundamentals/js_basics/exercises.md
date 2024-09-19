@@ -27,3 +27,15 @@ arithmetic_integer.js
 
 ### Counting the Number of Characters
 character_count.js
+
+### Converting String to a Number
+string_to_number.js
+
+### Convert a String to a Signed Number
+see prior solution: string_to_number.js
+
+### Convert Number to a String
+number_to_string.js
+
+### Convert Signed Number to a String
+see prior solution: number_to_string.js
