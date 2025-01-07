@@ -84,23 +84,23 @@ function reverseChars(str) {
 
   while (start <= end) {
     if (isNonWordPunctuation(str[start])) {
-      reversedStrChard[start] = str[start];
+      reversedStrChars[start] = str[start];
       start += 1;
       continue;
     } else if (isNonWordPunctuation(str[end])) {
-      reversedStrChard[end] = str[end];
+      reversedStrChars[end] = str[end];
       end -=1;
       continue;
     } else {
-      reversedStrChard[start] = str[end];
-      reversedStrChard[end] = str[start];
+      reversedStrChars[start] = str[end];
+      reversedStrChars[end] = str[start];
     }
 
     start += 1;
     end -= 1;
   }
 
-  return reversedStrChard.join('');
+  return reversedStrChars.join('');
 }
 
 
